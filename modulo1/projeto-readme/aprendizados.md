@@ -1,0 +1,3 @@
+# Aprendizados da Semana
+
+Nossa semana foi iniciada com conteudos relacionados ao modo operante de trabalho da labenu , onde fomos capazes de aprender sobre as principais formas de comunicação,atraves dos aplicativos slack,vimeo,notion , formulário para que nós alunos pudesseos saber como seria o funcionamento.Aprendi também sobre conceitos mais **tecnicos** como  criar conta no git e associa-la ao git hub e hoje tivemos aulas sobre emgregabilidade, e concluiremos hoje com um projeto resumo de tudo aquilo que foi abordado nesta semana! 
