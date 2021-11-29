@@ -15,7 +15,7 @@
 const idade = ""
 console.log = (",typeof")
 
-// apareceu o nome live reoled enable acredito que seja pelo fato de não haver uma declaração */
+/*apareceu o nome live reoled enable acredito que seja pelo fato de não haver uma declaração */
 
 const nome = "Ewerton"
 const idade = 31
