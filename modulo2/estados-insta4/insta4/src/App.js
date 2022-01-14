@@ -29,8 +29,14 @@ class App extends React.Component {
           fotoUsuario:'https://images.unsplash.com/photo-1641982343852-3d75c2eb7e3b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60',
           fotoPost:'https://images.unsplash.com/photo-1641990458432-9c60bcdf8e84?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60',
 
-        }]
+        }],
+        valorInputPessoa=""
       }
+
+      Onchangeinputpessoa=(event)=>{
+        this.setState({ valorInputPessoa:event.target.value });
+      };
+
 
       render(){
        
@@ -45,9 +51,18 @@ class App extends React.Component {
         })
       
        return (
+      
+      
       <MainContainer>
+        <input 
+        value ={this.state.listaDosPost}
+        onChange={}
+        placeholder={"Nome"}
+         />
+        <button onClick={this.adicionaPessoa}>Adicionar</button>
         {listaDosPost}
       </MainContainer>
+        
       );
     }
 }
