@@ -84,7 +84,7 @@ class App extends React.Component {
     this.setState({tarefas: visualizaTarefa})
    }
 
-  
+  // adicionando comentario de bug
 
   
   
