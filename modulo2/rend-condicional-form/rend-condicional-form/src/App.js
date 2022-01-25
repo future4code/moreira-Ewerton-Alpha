@@ -9,7 +9,8 @@ import React from "react"
 
 class App extends React.Component {
   state = {
-    etapa:1 
+    etapa:1 ,
+    
   };
 
   renderenizaEtapa = () =>{
@@ -30,8 +31,8 @@ class App extends React.Component {
 
   }
 
-  irParaProximaEtapa = () => {
-    onclick= this.setstate + 1
+  irParaProximaEtapa = (event) => {
+   return this.state +1
   }
 
 
@@ -47,7 +48,7 @@ class App extends React.Component {
       </div>
       <div>
       {this.renderenizaEtapa()}
-      <button onClick={this.setState.irParaProximaEtapa}>Próxima etapa</button>
+      <button onClick={this.setState.state}>Próxima etapa</button>
       </div>
     </div>
   );
