@@ -1,0 +1,11 @@
+/*não consegui fazer importação aquivo vou tentar atravez de algum cokmponente*/
+.containerInput{
+    background-color: aquamarine;
+    height : 100 vh;
+    display:flex ;
+    justify-content:center;
+    align-items: center ;
+    Flex-direction:columns;
+}
+
+
