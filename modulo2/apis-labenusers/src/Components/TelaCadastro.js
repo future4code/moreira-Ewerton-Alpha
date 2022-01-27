@@ -1,11 +1,11 @@
-
-import axios from "axios";
 import React from "react";
+import axios from "axios";
 
-export default class extends React.Component{
+
+export default class TelaCadastro extends React.Component{
    state = {
        nome : "",
-       email: ""
+       email: "",
    }
    
    handleNome = (event) => {
@@ -23,8 +23,8 @@ export default class extends React.Component{
     const url = "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users"
     
     const body = {
-        name:"this.state.nome",
-        email:"this.state.email"
+        name:this.state.nome,
+        email:this.state.email
     }
 
     
@@ -33,14 +33,14 @@ export default class extends React.Component{
             Authorization: "ewerton-francis-moreira"
          }
      })
-    .then((res)=>{
+    .then((res) => {
        //console.log(res) 
-      alert="Usuário(a) cadastrado com sucesso "
+      alert("Usuário(a) cadastrado com sucesso ")
       this.setstate({name:"", email:""})
     })
     .catch((err)=>{
-       console.log(err.response.data)  // deste modo o erra está detalhado
-        alert="err.response.data"    // não está mostrando o Alert
+     //console.log(err)  
+     alert("err.res")    // não está mostrando o Alert
 
     })
     
