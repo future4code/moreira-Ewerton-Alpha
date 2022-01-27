@@ -1,0 +1,18 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}   
+
+
+
+video{
+    display:flex;
+    align-items: center;
+    /* responsividade */
+    min-width: 320px;
+    max-width: 480px;
+    margin: auto;
+}
+
+

@@ -1,0 +1,60 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}   
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.titulo{
+    
+    display: flex;
+    align-items: center;
+    margin: 10px
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: tomato;
+    padding:0;
+}
+
+.footer{
+    background-color: tomato;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column:1/-1;
+    
+    
+    
+    
+}
+
+main{
+background-color: turquoise;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+gap:1em;
+flex-direction: 1;
+flex-grow: 1;
+
+/*reponsividade*/
+padding: 20px;
+
+min-width: 320px;
+max-height: 2560px;
+margin: auto
+
+}
+
+ /*@media screen and (min-device-width : 320px) and (max-device-width : 480px) {
+// celulares //
+}*/
+    
