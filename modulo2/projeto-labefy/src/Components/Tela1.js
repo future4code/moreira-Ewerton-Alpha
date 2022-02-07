@@ -1,11 +1,9 @@
 import axios from "axios";
 import React from "react";
 // import { urlPlaylist } from "../GetAllPlaylist/GetAllplaylist"; tentativa template string
-import {Styledlist} from "./styled";
-
-
-
-const urlTracks ="https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks"
+import { Styledlist, Container } from "./styled";
+import Logo from "../imagens/LogoOriginal.jpeg";
+import BackImg from "../imagens/background.jpeg";
 
 const urlPlaylist =
   "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists";
@@ -22,7 +20,7 @@ export default class Tela1 extends React.Component {
   state = {
     todasPlaylist: [],
     pLaylistInput: "", //=> para guardar valor do input
-    playMusic: ""
+    playMusic: "",
   };
 
   componentDidMount = () => {
@@ -61,48 +59,54 @@ export default class Tela1 extends React.Component {
     this.setState({ pLaylistInput: event.target.value }); //sempre isso event.target.value => onchange
   };
 
-   
-  //  getPlaylistTracks = () => {
-  //    axios
-  //    .get(urlTracks,headers)
-  //    .then(()=>this.state{playMusic})
-  //  }
-
-
-
-
-
+  removerPlaylist = (id) => {
+    const urldelete = `https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${id}`;
+    axios.delete(urldelete, headers);
+  };
 
   render() {
     // console.log(this.state.todasPlaylist) // agora que eu sei que funciona [] transformo em obj
-
+    console.log(this);
     const novaPlaylist = this.state.todasPlaylist.map((nova) => {
       //map tranfomando o state em lista
-      return <Styledlist><li key={nova.id}>{nova.name}</li></Styledlist>;
+      return (
+        <Styledlist>
+          <button onClick={() => this.removerPlaylist(nova.id)}>remover</button>
+          <li onClick={this.props.irParaLista} key={nova.id}>
+            {nova.name}
+          </li>
+        </Styledlist>
+      );
     });
+
     return (
-      <div className="Container">
-        <div className="logo">
-         <h1></h1> 
-        </div>
-        <div className="">
-          <font color="#38B6FF">
-            <p2>Gênero Musical Playlist</p2>
-          </font>
+      <Container>
+       
+       
+       
+        <figure>
+          <img src={Logo} />
+          <img src={BackImg} />
+          
+          </figure>
+        <div>
+          <p>Gênero Musical Playlist</p>
         </div>
         <input
           value={this.state.pLaylistInput} //=>pegando o valor do estado 2- criar função (event)para o valor do input
           onChange={this.ontextoInput}
           placeholder="playlist"
         />
-        <button onClick={this.createPLaylist}>Adicionar </button>
-        
+        <div>
+          <button onClick={this.createPLaylist}>Adicionar </button>
+
           <button>ir para sua plylist</button>
+          <button>remover</button>
+        </div>
         
-       <div> {novaPlaylist}</div>
-      </div>
+        <div> {novaPlaylist}</div>
+        
+      </Container>
     );
   }
 }
-
-

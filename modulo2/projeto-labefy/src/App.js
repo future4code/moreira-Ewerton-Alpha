@@ -17,35 +17,36 @@ export default class App extends React.Component {
     
   }
 
-
+  irParaGenero = ()=>{
+    this.setState({home:"genero"})
+   }                                         //=. funções para os botõs não é prioridade agora
+ 
+   irParaLista = ()=> {
+     this.setState({home:"lista"})
+ 
+   }
+ 
 
   escolheTela = () => {
     switch (this.state.home){
       case "genero":
-        return <Tela1 />
+        return <Tela1  irParaLista={this.irParaLista}/>
       case  "lista" :
-        return <OutraTela  />
+        return <OutraTela voltar={this.irParaGenero} />
         default:
           return <div>Erro!Página não encontrada</div>
     }
     
   }
  
-  // irParaGenero = ()=>{
-  //   this.setState({home:"genero"})
-  // }                                         //=. funções para os botõs não é prioridade agora
-
-  // irParaLista = ()=> {
-  //   this.setState({OutraTela:"lista"})
-
-  // }
-
+ 
   
   render(){
     return (
       <div >
       {this.escolheTela()}
       </div>
+
     );
   }
   
