@@ -1,142 +1,127 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
- 
-
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import { FcLike } from "react-icons/fc";
+import { GiHeartStake } from "react-icons/gi";
+import { GiBrokenHeart } from "react-icons/gi";
+import Logo from "../../img/logotipo.png";
 
 
 const Container = styled.div`
-background-color:red;
-margin:0;
-display: flex;
-flex-direction: column;
-align-items: center;
-flex-wrap: nowrap;
-`
+background-color:
+#fc9cb4;
+width:400px;
+height:600px; 
+position:fixed;
+top:10%;
+left:10%;
+transforms:translate(-50%,-50%);
+border-radius:15px;
+border-color:Black;
 
 
-
-
-// const ContainerFilho =styled.fieldset`
-//  margin-left: auto;
-//  margin-right: auto;
-//  margin-top:120px;
-//  width:30%;
-//  height:600px;
-//  border-radius:10px;
-//  background-color:blue;
-//  button{
-//   margin-left: 100px;
-//   margin-right:100x;
-//   margin-top:400px;
-//   cursor: pointer;
-//   transistion
-  
-  
-  
-
-//   }
- 
-//  `
- 
-const ContainerFilho =styled.fieldset`
-display:flex;
-flex-direction: column;
-flex-wrap: nowrap;
-justify-content: space-around;
-align-items: center;
-background-color:blue;
-margin-left:50px;
-margin-right:10px:
-border-radius:10px;
-border-
- 
- 
- 
-
- }
-
-`
+`;
 
 
 
 const Titulo = styled.div`
-display:flex;
-align-items: center;
-justify-content: center;
-background-color:green;
-font-size:20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+`;
 
- ` 
-const Button = styled.div`
-display:flex;
-margin:20px;
 
+
+const Img = styled.img`
+  border-radius: 30px;
+`;
+const Logomarca = styled.img`
+  width: 50%;
+`;
+
+const Perfil = styled.div`
 `
- 
- 
- 
 
- export function TelaIncial (props){
+export const Botao = styled.button`
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: transparent;
+  transition: 0.2s ease;
+  align-self: center;
+  font-size: 0.8em;
+  margin-left: 0.2em;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.5s;
+  :hover {
+    background-color: transparent;
+    color: transparent;
+    transform: scale(1.2);
+  }
+  :active {
+    background-color: transparent;
+  }
+`;
 
-   const [perfil,setPerfil] = useState([])
-   
-   const [match,setMatch] = useState(false)
-   
+export function TelaIncial(props) {
+  const [perfil, setPerfil] = useState([]);
 
-   useEffect(()=>{
-    getProfile()
-  },[])
+  const [match, setMatch] = useState(false);
 
+  useEffect(() => {
+    getProfile();
+  }, []);
 
-   const getProfile = () => {
-    axios.get("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:ewerton/person")
-   .then((res)=>{
-    setPerfil(res.data.profile)
-    console.log(res.data.profile)
-  })
-   .catch((err)=>
-   console.log(err.response))
+  const getProfile = () => {
+    axios
+      .get(
+        "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:ewerton/person"
+      )
+      .then((res) => {
+        setPerfil(res.data.profile);
+        console.log(res.data.profile);
+      })
+      .catch((err) => console.log(err.response));
+  };
+  const ChoosePerson = () => {
+    const body = { id: perfil.id, choice: true };
+    axios
+      .post(
+        "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:ewerton/choose-person",
+        body
+      )
+      .then((res) => {
+        alert("Você deu Match");
+        setMatch(res.data);
+        getProfile();
+      })
+      .catch((err) => console.log(err.response));
+  };
 
-  }  
-   const ChoosePerson = () => {
-     
-      const body = {id:perfil.id,choice:true}  
-     axios.post("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:ewerton/choose-person",body)
-      .then((res)=>{
-        alert("Você deu Match")
-        setMatch(res.data)
-        getProfile()
-     })
-      .catch((err)=>console.log(err.response))}
+  return (
+      <Container>
+        <Titulo>
+          <Logomarca src={Logo} />
+          <Botao className="Pares" onClick={props.listaMatches}>
+            <GiHeartStake size="6em" color="#ff6994" />
+          </Botao>
+        </Titulo>
+        <hr></hr>
+        <Perfil>
+        <Img src={perfil.photo} alt={perfil.name}></Img>
+        <p1>{perfil.age}</p1>
+        <p2>{perfil.name}</p2>
+        <p3>{perfil.bio}</p3>
+        </Perfil>
+
+        <button onClick={() => getProfile()}>
+        <GiBrokenHeart size="6em" color="#ff6994"/>
+        </button>
+        <button onClick={() => ChoosePerson()}>
+        <FcLike size="6em" color="#ff6994" />
+        </button>
       
-      return (
-        <Container>
-          <ContainerFilho>
-           <Titulo>
-            <h1>Astromatch</h1>
-            <button onClick={props.listaMatches} >proximo</button>
-           </Titulo>
-           <hr></hr>
-          
-           <img src={perfil.photo} alt={perfil.name}></img>
-         <div>tamanho</div>
-         <p1>{perfil.age}</p1>
-         <p2>{perfil.name}</p2>
-         <p3>{perfil.bio}</p3>
-         
-         
-         
-         <Button> 
-         <button onClick={()=>getProfile()}>Não</button>
-         <button onClick={()=>ChoosePerson()}>Sim</button>
-         </Button>
-         
-         </ContainerFilho>
-         
-          
-        </Container>
-      );
-   }
-       
-  
+      </Container>
+  );
+}

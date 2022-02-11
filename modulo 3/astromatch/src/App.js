@@ -1,7 +1,7 @@
 import React , {useState}from 'react'
 import { TelaIncial } from './pages/telainicialPages/TelaInicial';
 import { TelaMatches } from './pages/telaMatchesPages/TelaMatches';
-
+import { GlobalStyled } from './GlobalStyled';
 
 
 
@@ -37,7 +37,7 @@ import { TelaMatches } from './pages/telaMatchesPages/TelaMatches';
     return (
       <div>
        {selectPage()}
-      
+       <GlobalStyled/>
       </div>
   
     );
