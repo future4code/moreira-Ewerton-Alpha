@@ -14,12 +14,22 @@ export const  Administrativo = ()=> {
       navigate('/Logon')
     }
     
+    const irParaCriacaoViagens = () => {
+      navigate('/CriarViagens')
+    }
     
    return (
         <div >
-        <h1>  Faça Aqui seu Login</h1>  
+        <h1> Painel Administrativo </h1>  
+        
         <button onClick={voltarHome}>Voltar</button>
         <button  onClick={irParaLogon}>Logon</button>
+        <button onClick={irParaCriacaoViagens}>criar Viagem</button>
+        <div>   
+        <button>Deletar Viagem</button>
+        </div>
+        
+        
         </div>
       );
     }

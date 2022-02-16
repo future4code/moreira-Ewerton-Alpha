@@ -4,3 +4,8 @@
   
 }
 
+ body {
+ background-image:url("./Imagens/BackGround.jpeg");
+ background-repeat:no-repeat;
+ background-size:100%;
+}
