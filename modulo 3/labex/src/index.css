@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+
+ body {
+ background-image:url("./Imagens/fundoHD3.png");
+ background-repeat:no-repeat;
+ background-size:auto;
+ background-color:black;        
+ 
+ /* background-attachment:cover;
+ background-position: center; */
+
+ 
+ 
+ 
+ /* o black para tempo de carregamento da pagina */
+ /* //background auto - Para o navegado se Virar com a imagem kkkk , tamanho fixo usando pix ou %, 
+       tem o Contain tenta mostrar 100 % sem cortar ,e o Cover  que vai fazer cortes mas vai prencher
+       a tela inteira**/
+
+
+}
