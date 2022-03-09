@@ -4,10 +4,10 @@
 //Acredito que vá imprimir todos os elementos do  array
 //separado por item= nome e apelido com numeração dos elementos com index
 
-//2) retornará apenas os nos dos ususarios
-
-//3) acredito que não funcionará por conta que ele está pedindo a negação
+//2) acredito que não funcionará por conta que ele está pedindo a negação
 //de uma string
+
+//3) retornará o snomes diferentes sa chijo
 
 ///////Exercicio de escrita 
 
@@ -78,8 +78,9 @@ const produtos = [
       console.log(listaProdutos)
   */  
  //c)>>>>>>>>. só consegui com ajuda <<<<<<
+ //funccão com call  Back
  /* 
- function novaLista(item){
+ function novaLista(item){           
        return{
         nome: item.nome,
         preco: item.preco
@@ -87,6 +88,14 @@ const produtos = [
              
     }
     
+
+    ou >>>>>>>>>>>
+
+    const novaLista = (item,indice) => {
+    return item.nome,item.preco
+    }
+
+
     console.log(produtos.map(novaLista));
 */
 
