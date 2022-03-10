@@ -60,7 +60,7 @@ const  HomeForm = () => {
         fullWidth             //deixa o botão tamanho input
         variant={"contained"}
         required
-        onClick={()=> goToFeed(navigate)}
+        onClick={()=> goToFeed()}
        >
        Enviar
       </Button>

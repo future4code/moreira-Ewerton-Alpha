@@ -4,8 +4,9 @@ import styled from "styled-components"
 
 export const Titulo = styled.h1`
 margin-top:10vh;
-margin-left:25vh;
-font-size:70px;
+margin-left:55vh;
+margin-bottom:0px;
+font-size:60px;
 color:#0080ff;
 
 `
@@ -22,7 +23,7 @@ export const Main = styled.div`
 border:2px solid #0080ff;
 padding:20px;
 flex-direction:Column;
-margin-top:30vh;
+margin-top:10vh;
 margin-left:40vh;
 margin-right:40vh;
 border-radius:10px;
@@ -32,7 +33,8 @@ box-shadow:10px 0 15px -6px rgba(31, 73, 125, 0.8), -12px 0 8px -6px rgba(31, 73
 input{
 background-color:rgb(255,255,255);
 height:2vh;
-width:30vh;
+width:50vh;
+
 
 border-radius:5px;
 }

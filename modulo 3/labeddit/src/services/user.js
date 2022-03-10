@@ -10,7 +10,7 @@ export const headers = 'Content-Type: application/json'
  .then((res)=>{
     localStorage.setItem("token",res.data.token)
     clear()
-    goToFeed()
+    goToFeed(navigate)
     
 })
   
