@@ -52,6 +52,7 @@ class Post extends React.Component {
 
   onClickCurtida = () => {
     console.log('Curtiu!')
+    this.setState({curtido:!this.state.curtido})
   }
 
   onClickComentario = () => {
@@ -77,6 +78,7 @@ class Post extends React.Component {
     }
 
     let componenteComentario
+
 
     if(this.state.comentando) {
       componenteComentario = <SecaoComentario aoEnviar={this.aoEnviarComentario}/>

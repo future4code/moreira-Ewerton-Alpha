@@ -19,7 +19,7 @@ export class SecaoComentario extends Component {
 
 	onChangeComentario=(event)=>{
           console.log(event.target.value)
-		  this.state({valorComentariio:event.target.value})
+		  this.setState({valorComentario:event.target.value})
 	}
 
 	render() {

@@ -30,19 +30,22 @@ class App extends React.Component {
           fotoPost:'https://images.unsplash.com/photo-1641990458432-9c60bcdf8e84?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60',
 
         }],
-        valorInputPessoa=""
+        valorInputPessoa:""
       }
 
       Onchangeinputpessoa=(event)=>{
-        this.setState({ valorInputPessoa:event.target.value });
+        this.State({ valorInputPessoa:event.target.value });
       };
 
+
+      
 
       render(){
        
        
         const listaDosPost=this.state.listaDosPost.map((post,index)=>{
         return <Post key={index}
+        
         nomeUsuario={post.nomeUsuario}
         fotoUsuario={post.fotoUsuario}
         fotoPost={post.fotoPost}
@@ -50,13 +53,16 @@ class App extends React.Component {
          />
         })
       
+         
+
+
        return (
       
       
       <MainContainer>
         <input 
         value ={this.state.listaDosPost}
-        onChange={}
+        onChange={this.state.Onchangeinputpessoa}
         placeholder={"Nome"}
          />
         <button onClick={this.adicionaPessoa}>Adicionar</button>
