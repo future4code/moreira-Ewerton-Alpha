@@ -16,6 +16,7 @@ import login from '../../services/user'
 const  HomeForm = () => {
 
    const navigate = useNavigate()
+  //  console.log(navigate("/Feed"))
   
   
 
@@ -60,7 +61,7 @@ const  HomeForm = () => {
         fullWidth             //deixa o botão tamanho input
         variant={"contained"}
         required
-        onClick={()=> goToFeed()}
+        // onClick={()=>goToFeed(navigate)}
        >
        Enviar
       </Button>

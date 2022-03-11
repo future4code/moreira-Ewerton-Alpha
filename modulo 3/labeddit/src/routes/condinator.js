@@ -13,7 +13,7 @@ export const goToRegister = (navigate) => {
 }
 
 export const goToFeed = (navigate) => {
-    
+    console.log(navigate)
     navigate("/Feed")
 }
 
