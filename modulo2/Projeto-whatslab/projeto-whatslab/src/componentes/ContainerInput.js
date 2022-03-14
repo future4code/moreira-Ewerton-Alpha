@@ -1,6 +1,6 @@
 import React from "react"
 import { AiOutlineSend } from "react-icons/ai";
-import { CgProfile } from "react-icons/cg";
+// // import { CgProfile } from "react-icons/cg";
 
 class ContainerInput extends React.Component {
   render() {
@@ -10,11 +10,12 @@ class ContainerInput extends React.Component {
           <h2>{this.props.nome}</h2>
 
           
-          <CgProfile size={25} color="#000" />
+          {/* <CgProfile size={25} color="#000" /> */}
         </button>
-        <button className="buttonEnviar">
-          <input type="text" placeholder="enviar mensagem" />
+        <button>
+         
           <AiOutlineSend size={25} color="#000" />
+         
         </button>
       </div>
     );
