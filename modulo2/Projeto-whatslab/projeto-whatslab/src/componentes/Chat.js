@@ -9,84 +9,92 @@ import Logo from "../image/chat.png"
 
 
 const Container = styled.div`
-height: 95vh; 
+height: 100vh; 
 display:flex;
 flex-direction: column;
 align-items: center;
-margin-top:2vh;
-width:55%;
-margin-left:30vh;
+margin:0 auto;
+width:55vw;
+overflow:hidden;           
 border: solid;
 border-width: 2px;
 border-height:40px;
 border-radius:15px 90px; 
 background-color: aquamarine;
+`
+
+const Titulo = styled.h1`
+font-size:2 rem;
+margin-top:1vh;
 
 
+`
 
-h1{
-  font-size:60px;
-  margin-top:1vh;
-  margin-bottom:-2vh;
+const MensagemBot = styled.p`
+text-align: center;
+background-color:#FF00FF;
+height:30px;
+border-radius:2px; 
+font-weight: bolder;
+width:100%;
+`
+
   
-}
-  
-p{
- 
-  text-align: center;
-  background-color:#FF00FF;
-  height:30px;
-  border-radius:2px; 
-  font-weight: bolder;
-}
-
-
-form{
-  margin-top:-25px;
+const Formulario = styled.form`
+margin-top:25px;
   height:78vh; 
   width:50%;
   border:solid;
   border-width: 8px;
   border-height:30px;
   border-radius:10px;
-  img{
-    height:40vh;
-    width:38vh;
-   }
+  // img{
+  //      height:40vh;
+  //      width:38vh;
+  //    }
+
   
-   input .name{
-     margin-top:10vh;
-     margin-right:60vh;
-     height:3vh;
-     width:20vh;
-     border-radius:5px; 
+`
+
+const InputNome = styled.input`
+margin-top:71vh;
+margin-right:60vh;
+height:30px;
+width:80%;
+border-radius:2px;
+
     
-    
-  }
-    .name{
 
-    }
-  button{
-    margin-top:20vh;
-    height:8vh;
-    width:8vh;
-    margin-left:30vh;
-  }
-}
+`
+const InputMensagem = styled.input`
 
+margin-right:60vh;
+height:30px;
+width:80%;
+border-radius:2px;
 
+`
+
+const Botao = styled.button`
+margin-left:81%;
+width:20%;
+height:8vh;
+gin-left:60vh;
 
 
 
 `
+
+
+
+
+
+
 
 
 
 const Segunda = styled.img`
 height:5vh;
-`
-const Input1 = styled.input`
-
 `
 
 class Chat extends React.Component {
@@ -94,9 +102,17 @@ class Chat extends React.Component {
   state = {
     nome :"",
     mensagem: "",
-    novaMensagem: [this.state.mensagem],
+    novasMensagens:[]
+    // antigasMensagens:[] 
+    // [
+    //   {
+    //     nome: this.state.nome,
+    //     mensagem: this.state.mensagem
+    //     }
+    // ],
     
   }
+ 
   
   onchangeNome = (event) => {
     this.setState({nome:event.value})
@@ -106,70 +122,63 @@ class Chat extends React.Component {
     this.setState({mensagem:event.value})
   }
   
-  // atualiza = (event) => {
-  //   this.novaMensagem.map((item){
-  //     return( <h2>nome:{item.nome}</h2>
-  //            <p>mensagem:{item.mensagem}</p> )
-  //   })
-  // }
+
 
   onClick = (event) => {
     event.preventDefault()
     console.log(event)
-    this.onchangeNome(event.target[1])               
-    this.onchangeMensagem(event.target[2])
-  }
-  
-   
-  //  novaMensagem = [{
-  //     nome : this.state.nome ,
-  //     mensagem: this.state.mensagem
-  //   }]
+    this.onchangeNome(event.target[0])               
+    this.onchangeMensagem(event.target[1])
     
-//     atualiza = this.novaMensagem.map((item)=>{
-//       return (<h2>nome:{item.nome}</h2>
-//              <p>mensagem:{item.mensagem}</p>
-              
+  }
+    
+ 
+   atualizaMensagem = () => {
+   
+    const acrescentaMensagem = [this.state.nome,this.state.mensagem,...this.state.mensagem]
+    this.setState({mensagem:acrescentaMensagem})
+    
+    
+  }
+
   
-//       })      
-//  }
+
   
   render() {
     return (
       <Container>
         
-        <h1 >Whatslab</h1>
-        
-          <h2>{this.props.nome}</h2>
+        <Titulo>Whatslab</Titulo>
+        <MensagemBot>Aguarde que o bot chat já responde </MensagemBot>
+        <h2>nome:{this.state.nome}</h2>
+        <p>mensagem:{this.state.mensagem}</p>
+             
           
-          <form  onSubmit={this.onClick}> 
-              <p>Aguarde que o bot chat já responde </p>
-              <img src={Imagem}></img>
+          <Formulario onSubmit={this.onClick}> 
               
-              <h2>nome:{this.state.nome}</h2>
-              <p>mensagem:{this.state.mensagem}</p>
+              {/* <img src={Imagem}></img> */}
+              
+              
              
              
-              <button 
-              type="submit">enviar </button>
              
              
-              <input classe ="name"                                 //definir classe para o input
+              <InputNome                                 
               placeholder= "nome"
               value={this.state.onchangeNome}
-              
               />
-              <input
+
+              <InputMensagem
               placeholder="insira aqui sua mensagem"
               value={this.state.onchangeMensagem}
-              
               />
               
-              
+              <Botao 
+              type="submit">enviar </Botao>
                
-              {/* <ContainerInput /> */}
+         
                
-          </form>
+          </Formulario>
           
           <Segunda src={Logo}></Segunda>
           
