@@ -29,39 +29,44 @@
 
 
 //2)
-// const numero =  Number( process.argv[2])
-// const number =  Number(process.argv[3])
+const numero = 10                //Number( process.argv[2])
+const number =  5               // Number(process.argv[3])
  
 
+    
+   function operacao (){
+    switch(numero,number){
+        case "soma":
+            console.log(numero + number)  
+            break;
+        case "subt":
+            console.log(numero - number)  
+            break;
+        case "multi":
+            console.log(numero * number)  
+            break;
+        case "div":
+            console.log(numero - number)  
+            break;
+    }
 
-// const operacao =()=>{
-    
-//     switch(operacao){
-//         case "soma":
-//             console.log(numero + number)  
-//             break;
-//         case "subt":
-//             console.log(numero - number)  
-//             break;
-//         case "multi":
-//             console.log(numero * number)  
-//             break;
-//         case "div":
-//             console.log(numero - number)  
-//             break;
-//     }
-    
-// }
+   } 
  
-// console.log(soma)
+    
+  
 
  // outra forma a
 
-const numero = 10
-const number =  5 
+// const numero = 10
+// const number =  5 
 
 
-const soma = number + numero
+// const soma = number + numero
 
-console.log(soma)
+// console.log(soma)
+
+// questão 3 
+
+
+
 
