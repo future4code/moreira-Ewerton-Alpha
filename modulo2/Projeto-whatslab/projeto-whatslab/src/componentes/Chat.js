@@ -94,7 +94,7 @@ class Chat extends React.Component {
   state = {
     nome :"",
     mensagem: "",
-    novaMensagem: [this.state.mensagem],
+    // novaMensagem: [this.state.mensagem],
     
   }
   
