@@ -1,0 +1,13 @@
+GET http://localhost:3003/test
+content-type: application/json
+
+
+POST http : //localhost:3003/adicionaProdutos
+Content-Type: application/json
+# Authorization: ewerton-moreira
+
+# {
+#     "id": "4",
+#     "name": "Linux",
+#     "price": "1000"
+# }
