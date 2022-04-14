@@ -1,0 +1,2 @@
+GET http://localhost:3003/lista
+content-type: application/json
