@@ -1,0 +1,7 @@
+Post http://localhost:3003/user
+content-type: application/json
+{
+    "name":"davi",
+    "cpf" : 123456,
+    "dataNasc" :12121990
+}
