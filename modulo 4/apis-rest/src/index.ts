@@ -18,11 +18,7 @@ app.use(cors());
 
 //1)
 app.get("/user",(req:Request, res:Response)=>{
-    try{
-      const novaLista = req.
-    }catch(error){
-
-    }
+   
 })
 
 
