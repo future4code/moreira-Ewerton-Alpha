@@ -1,0 +1,8 @@
+PUT http://localhost:3003/users
+content-type: application/json
+
+{
+    "username": "Abraão",
+    "email": "abra@gmail.com",
+    "pwd":"2425"
+}
