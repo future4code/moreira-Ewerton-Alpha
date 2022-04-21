@@ -1,8 +1,9 @@
 
 import Chat from "./componentes/Chat";
-import ContainerInput from "./componentes/ContainerInput"
+// import ContainerInput from "./componentes/ContainerInput"
 import "./style.css";
 import styled from 'styled-components'
+import Whatslab from './componentes/Whatslab'
 
 //tentei fazer importar um arquivo unico css e não consegui o style.css//
 //terntei trocar a div classe name CONTAINERIPUNTE e Containerinpu2 por componentes//
@@ -16,14 +17,15 @@ function App() {
  
  
   return (
-    <Container>
+    <div>
       
-       <Chat nome={`Chat`}/>
-       
+       {/* <Chat nome={`Chat`}/> */}
+       {/* <Chat/>
+        */}
       
-
+     <Whatslab/>
     
-    </Container>
+     </div>
   );
 }
 

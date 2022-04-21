@@ -42,7 +42,7 @@ p{
 
 
 form{
-  margin-top:-25px;
+  margin-top:1px;
   height:78vh; 
   width:50%;
   border:solid;
