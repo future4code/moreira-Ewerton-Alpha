@@ -1,0 +1,24 @@
+POST http://localhost:3003/users
+Content-Type: application/json
+
+{
+    "name":"Mario",
+    "email":"mario@hotmail.com",
+    "password":"3"
+}
+
+###
+
+GET http://localhost:3003/users
+Content-Type: application/jason
+
+###
+POST http://localhost:3003/products
+Content-Type: : application/json
+
+{
+    "name" : "product1",  
+    "image_url": "sou um produto 1",
+    "price":100
+    
+}
