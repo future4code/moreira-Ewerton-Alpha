@@ -1,7 +1,8 @@
 *{
   margin: 0 px;
   padding: 0 px;
-  /* background-image: url("./imagens/background\ universal.jpeg"); */
+  Box-sizing: border-box;
+  background-image: url("./imagens/newBack.png");
  
   
   

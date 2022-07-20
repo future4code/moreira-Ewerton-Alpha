@@ -8,13 +8,9 @@ export const Styledlist = styled.div`
   color: #00FECA;
   font-family:arial;
   font-size: 30px;
-  
-  
-  
-
-    &:hover{
-      cursor:pointer;
-      background-color:#d586f9;
+  cursor:pointer;
+   :hover{
+       background-color:blue;
    }
 
 `
@@ -22,52 +18,68 @@ export const Styledlist = styled.div`
 export const Container = styled.div`
     
    
+// figure {
+  //   img{
+  //   height:100%;
+  //   whidth: 200 px;
+  //   background:BackImg
+   
+
+  // }
+ }
+ `   
+   
+export const Cabecario = styled.div`
+
+    font-size: 60px;
+    font-weight: bold;
+    margin:30px 5px 20px 300px;
+    
+    `
+
+export const Botoes = styled.div`
+button {
+  background-color: #00FECA; /* Green */
+  // flex-direction:row;
+  border: 10px;
+  // color: #d586f9;
+  color:black;
+  font-weight: bold;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display:inline;
+  justify-content: space-between;
+  font-size: 15px;
+  margin:2% 12%;
+  cursor:pointer;
+  transition:0.5s all ease-out;
+}
+:hover{
+  background-color:white;
+}
+`
+export const Entrada= styled.div`
+input{
+  margin-left:25%;
+  width:50% ;
+  font-size:20px;
+  font-size:bold;
+}
+`
+export const PLaylist = styled.div`
+width:50%;
+margin-left:25%;
+
+` 
+   
+    
     
    
 
-    figure {
-      img{
-      height:600px;
-      whidth: 200 px;
-      background:BackImg
-     
+  
 
-    }
-   }
-
-    div {
-      
-      p { 
-        color : #00FECA ;
-        height : 400 ;
-        font-weight: bold;
-        font-size:50px;
-
-
-      }
-    }
-
-    button {
-      background-color: #00FECA; /* Green */
-      flex-direction:row
-      border: none;
-      color: #d586f9;
-      font-weight: bold;
-      padding: 10px 10px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 15px;
-  }
-
-  input{
-    font-size:20px
-    font-size:bold
-
-
-  }
-
-   `
+  
 
 
   // //  export const Botoes = styled.div`

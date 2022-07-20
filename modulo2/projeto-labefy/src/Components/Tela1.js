@@ -1,9 +1,7 @@
 import axios from "axios";
 import React from "react";
 // import { urlPlaylist } from "../GetAllPlaylist/GetAllplaylist"; tentativa template string
-import { Styledlist, Container } from "./styled";
-import Logo from "../imagens/LogoOriginal.jpeg";
-import BackImg from "../imagens/background.jpeg";
+import { Styledlist, Container,Cabecario,Botoes , Entrada,PLaylist} from "./styled";
 
 const urlPlaylist =
   "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists";
@@ -82,29 +80,31 @@ export default class Tela1 extends React.Component {
     return (
       <Container>
        
+    
        
-       
-        <figure>
+        {/* <figure>
           <img src={Logo} />
           <img src={BackImg} />
           
-          </figure>
-        <div>
-          <p>Gênero Musical Playlist</p>
-        </div>
+          </figure> */}
+        <Cabecario>
+          Bem Vindo ao Labefy
+        </Cabecario>
+        <Entrada>
         <input
           value={this.state.pLaylistInput} //=>pegando o valor do estado 2- criar função (event)para o valor do input
           onChange={this.ontextoInput}
-          placeholder="playlist"
+          placeholder="Insira seu Genero Favorito"
         />
-        <div>
+        </Entrada>
+        <Botoes>
           <button onClick={this.createPLaylist}>Adicionar </button>
 
           <button>ir para sua plylist</button>
           <button>remover</button>
-        </div>
+        </Botoes>
         
-        <div> {novaPlaylist}</div>
+        <PLaylist> {novaPlaylist}</PLaylist>
         
       </Container>
     );
