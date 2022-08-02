@@ -14,17 +14,67 @@
 
 //2)Exercicio 2
 
-const comidasPreferidas = ["pizza","açaí","hamburguer","sushi"]
-//console.log(comidaspreferidas)
-//const frase=`Essas são as minhas comidas preferidas ${comidaspreferidas}`
-//console.log(frase)
-const comidaFavoritaUsuario = prompt("Qual a sua comida Favorita ?")
-const segundoItem=comidasPreferidas[1]
-console.log(comidasPreferidas)
+// const comidasPreferidas = ["pizza","açaí","hamburguer","sushi"]
+//a)console.log(comidaspreferidas)
+// b.
+// console.log("Essas são as minhas comidas preferidas: ")
+// console.log(comidasPreferidas[0])
+// console.log(comidasPreferidas[1])
+// console.log(comidasPreferidas[2])
+// console.log(comidasPreferidas[3])
+// console.log(comidasPreferidas[4])
+
+// c)
+// const comidasPreferidas = ["pizza","açaí","hamburguer","sushi"]
+//  const novaComida = prompt("Diga uma comida que voce gosta!")
+//  comidasPreferidas[0] = novaComida
+//  console.log(comidasPreferidas)
+//           de outro Modo 
+ 
+//  const novaComida = prompt("Diga uma comida que voce gosta!")
+//  comidasPreferidas.splice(1,2,`${novaComida}`)
+//  console.log(comidasPreferidas)
 
 /* exercicio 3 
-let listadetarefas =[]
-let tarefasusuario= prompt("escreva 3 tarefas que você precise realizar hoje")
-listadetarefas.push(tarefasusuario)
-console.log(listasdetarefas)*/
+// a.b.c.
+// const listaDeTarefas = []
+// const primeiraTarefa = prompt("Digite uma tarefa")
+// const segundaTarefa = prompt("Digite uma tarefa")
+// const terceiraTarefa = prompt("Digite uma tarefa")
+
+// listaDeTarefas.push(primeiraTarefa)
+// listaDeTarefas.push(segundaTarefa)
+// listaDeTarefas.push(terceiraTarefa)
+*/
+// c.
+// console.log(listaDeTarefas)
+//  Usando Splice refernte as tres   a.b.c
+
+// const listasTarefas=[]
+// const task1 = prompt("digite uma terafa ??")
+// const task2 = prompt("digite uma terafa??")
+// const task3 = prompt("digite uma terafa ??")
+
+// listasTarefas.splice(0,2,`${task1}`,`${task2}`,`${task3}`)
+// console.log(listasTarefas)
+
+// // d ,e ,f
+
+// const userChange= Number(prompt("qual tarefa voce quer remover 0 ou 1 ou 2 "));
+// listasTarefas.splice(`${userChange}`,1)
+// console.log(listasTarefas)
+
+// Desafio
+// trim - retira os espaço da string
+// const email = prompt("digite um email")
+// console.log(email.trim())
+
+// const frutas = ["Banana", "Morango", "Abacaxi", "Laranja", "Ameixa"];
+
+// const indexAbabaxi = frutas.indexOf("Abacaxi");
+// const tamanhoArray = frutas.length;
+
+// console.log("Index abacaxi: ", indexAbabaxi, "tamanho do array:", tamanhoArray);
+
+
 
