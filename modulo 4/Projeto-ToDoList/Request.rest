@@ -14,5 +14,5 @@
 # }
 
 
-GET http://localhost:3003/user/1
-content-type: application/json
+# GET http://localhost:3003/user/1
+# content-type: application/json
