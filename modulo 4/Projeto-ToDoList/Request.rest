@@ -1,17 +1,17 @@
 # GET http://localhost:3003/users
 # content-type: application/json
 
-# POST http://localhost:3003/user
-# content-type: application/json
+POST http://localhost:3003/user
+content-type: application/json
 
-# {
+{
     
-#     "id" : 2,
-#     "name" : "Brian",
-#     "nickname" : "Brian",
-#     "email":"Brian@gmail.com"
+    "id" : 1,
+    "name" : "Brian",
+    "nickname" : "Brian",
+    "email":"Brian@gmail.com"
 
-# }
+}
 
 
 # GET http://localhost:3003/user/1
