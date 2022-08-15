@@ -2,9 +2,9 @@ POST http://localhost:3003/users
 Content-Type: application/json
 
 {
-    "name":"Mario",
-    "email":"mario@hotmail.com",
-    "password":"3"
+    "name":"Taty",
+    "email":"Taty@hotmail.com",
+    "password":"4"
 }
 
 ###
