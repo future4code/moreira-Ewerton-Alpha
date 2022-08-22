@@ -16,3 +16,21 @@ const getSubscribersIds = (subscribers: any) => { }
 const notifyAllSubscribers = () => { }
 
 const main = () => { }
+
+
+//exercicio 4 
+//a)
+
+
+//b)
+// async function createNews(
+//   title: string,
+//   content: string,
+//   date: number
+// ): Promise<void> {
+//   await axios.put(`${baseURL}/news`, {
+//     title: title,
+//     content: content, 
+//     date: date
+//   });
+// }
