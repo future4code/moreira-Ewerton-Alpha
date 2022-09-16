@@ -1,0 +1,49 @@
+POST http://localhost:3003/users/signup
+Content-Type:application/json
+
+{
+    "name": "Charlie",
+    "email": "Charlie@gmail.com",
+    "password": "1234567777"
+    
+}
+
+###
+# @name login
+
+POST http://localhost:3003/users/login
+Content-Type:application/json
+
+{
+   
+    "email": "mario@gmail.com",
+    "password": "1234"
+    
+}
+
+###
+# @name getProfile
+
+GET http://localhost:3003/users/profile
+Authorization: {{login.response.body.token}}
+
+###
+
+GET http://localhost:3003/users/{{getProfile.response.body.id}}/profile
+Authorization: {{login.response.body.token}}
+
+###
+
+POST http://localhost:3003/recipe
+Content-Type:application/json
+Authorization: {{login.response.body.token}}
+
+{
+  "title":"Big Mac",
+  "description": "Dois hamburgers , alface, queijo , molho especial , cebola ,picles num pão com gergelim "
+
+}
+
+###
+get http://localhost:3003/recipe/a6492118-d103-4e1a-bdf7-0cb28fff6338
+Authorization:{{login.response.body.token}}
