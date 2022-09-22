@@ -15,6 +15,7 @@ height:600px;
 position:fixed;
 top:10%;
 left:10%;
+margin-left:20em;
 transforms:translate(-50%,-50%);
 border-radius:15px;
 border-color:Black;
@@ -24,26 +25,38 @@ border-color:Black;
 
 
 
+
 const Titulo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 20px;
+  margin-top:3%;;
 `;
 
 
 
-const Img = styled.img`
-  border-radius: 30px;
+const Avatar = styled.img`
+  max-height:350px;
+  min-height:350px;
+  display:block;
+  width:100%;
 `;
 const Logomarca = styled.img`
-  width: 50%;
+  width: 65%;
+  margin-left:15%;
 `;
 
 const Perfil = styled.div`
+
+`
+const Choose = styled.div`
+display:flex;
+justify-content: space-around;
 `
 
 export const Botao = styled.button`
+  
   border: 1px solid transparent;
   background-color: transparent;
   color: transparent;
@@ -101,27 +114,31 @@ export function TelaIncial(props) {
 
   return (
       <Container>
+
+        
         <Titulo>
           <Logomarca src={Logo} />
           <Botao className="Pares" onClick={props.listaMatches}>
-            <GiHeartStake size="6em" color="#ff6994" />
+            <GiHeartStake size="3em" color="#ff6994" />
           </Botao>
         </Titulo>
-        <hr></hr>
+        
         <Perfil>
-        <Img src={perfil.photo} alt={perfil.name}></Img>
+        <Avatar src={perfil.photo} alt={perfil.name}></Avatar>
         <p1>{perfil.age}</p1>
         <p2>{perfil.name}</p2>
         <p3>{perfil.bio}</p3>
         </Perfil>
 
-        <button onClick={() => getProfile()}>
-        <GiBrokenHeart size="6em" color="#ff6994"/>
-        </button>
-        <button onClick={() => ChoosePerson()}>
+        <Choose>
+        <Botao onClick={() => getProfile()}>
+        <GiBrokenHeart size="5em" color="#ff6994"/>
+        </Botao>
+        <Botao onClick={() => ChoosePerson()}>
         <FcLike size="6em" color="#ff6994" />
-        </button>
-      
+        </Botao>
+        </Choose>
+       
       </Container>
   );
 }

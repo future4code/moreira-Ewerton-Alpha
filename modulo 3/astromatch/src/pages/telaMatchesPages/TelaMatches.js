@@ -2,11 +2,18 @@ import React from 'react';
 import axios from 'axios'
 import { useState } from 'react';
 import {useEffect} from 'react'
-  
+import styled from 'styled-components'
+import Button from '@mui/material/Button'
 
+
+   const AvatarM = styled.img`
+   max-height:100px;
+   min-height:100px;
+   border-radius:50%;
+   `
    
-   
- export function TelaMatches (props){
+  
+  export function TelaMatches (props){
     
     const [conexoes,setconexoes]=useState([])
     
@@ -28,7 +35,7 @@ import {useEffect} from 'react'
     const novaLista = conexoes.map(lista=>{
       return(
          <div> 
-           <img src ={lista.photo}></img>
+           <AvatarM src ={lista.photo}></AvatarM>
            <p>{lista.name}</p>
          </div>
       )
@@ -54,13 +61,14 @@ import {useEffect} from 'react'
 
     return (
         <div>
-         <button onClick={props.voltar}>voltar</button>
-         <h1>seusMatches</h1>
-         <li>
+         <button onClick={props.voltar}>VOLTAR</button>
+         <h1>Meus Matches</h1>
+         <ul>
           {novaLista}
-         </li>
-          <button onClick={putClear}>Apagar</button>
-        
+         </ul>
+          <Button disableElavation type="submit" color = "error" variant="contained" onClick={putClear}>Apagar</Button>
+          
+          
     
           
         </div>
